@@ -1,0 +1,30 @@
+{
+  "name": "muda-api",
+  "version": "1.0.0",
+  "description": "API to serve https://muda.education",
+  "main": "index.js",
+  "author": "Rennan",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "format": "prettier --write src/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.4",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": ">=5.16.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.0.2",
+    "sucrase": "^3.34.0"
+  }
+}
