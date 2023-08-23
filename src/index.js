@@ -1,7 +1,8 @@
-require('dotenv').config()
-const express = require('express')
-const mongoose = require('mongoose')
-const routes = require('./routes/routes')
+import 'dotenv/config'
+import cors from 'cors'
+import routes from './routes/routes'
+import express from 'express'
+import mongoose from 'mongoose'
 const mongoString = process.env.DATABASE_URI
 
 mongoose.connect(mongoString)
@@ -16,9 +17,13 @@ database.once('connected', () => {
 })
 
 const app = express()
+
+app.use(cors())
+app.disable('x-powered-by')
 app.use(express.json())
 app.use('/api', routes)
 
-app.listen(3000, () => {
-  console.log(`Server Started at ${3000}`)
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log(`Server Started at ${port}`)
 })

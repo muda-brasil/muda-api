@@ -2,11 +2,12 @@
   "name": "muda-api",
   "version": "1.0.0",
   "description": "API to serve https://muda.education",
-  "main": "index.js",
+  "main": "./src/index.js",
   "author": "Rennan",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "dev": "nodemon ./src/index.js",
+    "start": "nodemon ./src/index.js",
     "format": "prettier --write src/"
   },
   "license": "MIT",
